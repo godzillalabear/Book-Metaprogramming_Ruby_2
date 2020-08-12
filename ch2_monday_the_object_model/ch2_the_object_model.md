@@ -24,3 +24,25 @@
     - `obj.instance_variables`
     - there is no connection between an object's class and its instance variables, so you can have objects of the same class that carry different instance variables.
     - think instance variables as keys and values in a hash
+- methods
+
+    ```ruby
+    String.instance_methods == "abc".methods
+    String.methods != "abc".methods
+    ```
+
+    - an object's instance variables live in the object itself, and an object's methods live in the object's class
+- classes
+    - classes are nothing but objects
+    - `Class` has three instance methods: `allocate`, `new`, `superclass`
+
+    ```ruby
+    Class.superclass #=> Module
+    ```
+
+    - a class is a module with three additional instance methods (`allocate`, `new`, `superclass`)
+    - module → you want it to be included somewhter
+    - class → you want it to be instantiated or inherited
+- constants
+    - All the constants in a program are arranged in a tree similar to a file system
+    - you can refer to a constant by its path
