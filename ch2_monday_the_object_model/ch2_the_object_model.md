@@ -53,9 +53,8 @@
 - self
     - when you call a method, the receiver becomes self
     - every time you call a private method, it must be on the implicit receiver — self
-    - 
 
-        ![object-main](https://i.imgur.com/KE0Dld3.png)
+    ![object-main](https://i.imgur.com/KE0Dld3.png)
 
 > When you call a method, Ruby looks up the method by following the "one step to the right, then up" rule and then executes the method with the receiver as self.
 
