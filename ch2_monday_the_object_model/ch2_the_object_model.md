@@ -46,3 +46,32 @@
 - constants
     - All the constants in a program are arranged in a tree similar to a file system
     - you can refer to a constant by its path
+    - `::Constant` → root level constant
+
+- the object model
+    - you can `include` or `prepend` a module, the module will be in the ancestor chain
+- self
+    - when you call a method, the receiver becomes self
+    - every time you call a private method, it must be on the implicit receiver — self
+    - 
+
+        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/878cc647-40ef-453f-96ee-4defc6a91de1/_2020-08-16_1.42.17.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/878cc647-40ef-453f-96ee-4defc6a91de1/_2020-08-16_1.42.17.png)
+
+> When you call a method, Ruby looks up the method by following the "one step to the right, then up" rule and then executes the method with the receiver as self.
+
+### refinements
+
+```ruby
+module StringExtensions
+	refine String do
+		def to_alphanumeric
+			gsub(/[^\w\s]/, '')
+ 		end
+	end
+end
+```
+
+- active when you call `using StringExtensions` till the end of file or the end of module
+- 只要有 include module 就有用？
+- or the refine block itself
+- still experimental, use it carefully

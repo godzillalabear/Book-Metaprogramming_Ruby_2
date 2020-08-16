@@ -11,3 +11,5 @@ obj = MyClass.new
 puts obj.class
 puts obj.my_method
 puts obj.instance_variables
+
+@a
