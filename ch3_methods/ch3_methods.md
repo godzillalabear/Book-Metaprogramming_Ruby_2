@@ -27,8 +27,8 @@
 
 ![respond_to](https://i.imgur.com/AJb1l0D.png)
 
-    - ghost methods will return *false* in `respond_to?`
-    - what is truly `respond_to_missing?`???????
+- ghost methods will return *false* in `respond_to?`
+- what is truly `respond_to_missing?`???????
 
 ### Debugging in method_missing
 
